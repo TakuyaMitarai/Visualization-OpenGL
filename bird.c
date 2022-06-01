@@ -46,35 +46,51 @@ void timer(int value) {
 		c--;
 	}
 
-	float diffuse[5][3];
+	float diffuse[9][3];
 
-	diffuse[0][0] = 1;//赤
-	diffuse[0][1] = 0;
-	diffuse[0][2] = 0;
+	diffuse[0][0] = 1;//白
+	diffuse[0][1] = 1;
+	diffuse[0][2] = 1;
 
-	diffuse[1][0] = 1; //黄
-	diffuse[1][1] = 1;
+	diffuse[1][0] = 0.929; //黄
+	diffuse[1][1] = 0.941;
 	diffuse[1][2] = 0;
 
-	diffuse[2][0] = 0; //緑
+	diffuse[2][0] = 0.627; //黄緑
 	diffuse[2][1] = 1;
 	diffuse[2][2] = 0;
 
-	diffuse[3][0] = 1;  //橙
-	diffuse[3][1] = 0.48;
-	diffuse[3][2] = 0.10;
+	diffuse[3][0] = 0.761;  //水色
+	diffuse[3][1] = 1;
+	diffuse[3][2] = 1;
 
-	diffuse[4][0] = 0; //青
-	diffuse[4][1] = 0;
+	diffuse[4][0] = 0.375; //青
+	diffuse[4][1] = 0.375;
 	diffuse[4][2] = 1;
+
+	diffuse[5][0] = 1;//紫
+	diffuse[5][1] = 0.628;
+	diffuse[5][2] = 1;
+
+	diffuse[6][0] = 1;//桃
+	diffuse[6][1] = 0.628;
+	diffuse[6][2] = 0.628;
+
+	diffuse[7][0] = 1;//濃桃
+	diffuse[7][1] = 0.429;
+	diffuse[7][2] = 0.429;
+
+	diffuse[8][0] = 1;//赤
+	diffuse[8][1] = 0;
+	diffuse[8][2] = 0;
 	
-	int count2 = count / 6;
+	int count2 = count / 3;
 	dif[0] = diffuse[count2][0];
 	dif[1]= diffuse[count2][1];
 	dif[2]= diffuse[count2][2];
 	count++;
 
-	if(count == 29){
+	if(count == 23){
 		count = 0;
 	}
 
@@ -108,27 +124,27 @@ if(boo == 0){
 		glEnable(GL_LIGHT0);
 
 		glPushMatrix();/*座標系の保存*/
-	  	  	glTranslatef(1.65*x-5,2*y-7,0);
+	  	  	glTranslatef(1.9*x-5,2*y-7,0);
 			glRotatef( -hanekakudo, 0.0, 0.0, 1.0);
 			glScalef(0.3,1.6,0.6);
  			glutSolidSphere(4, 40, 10);
 		 glPopMatrix();/*座標系の復元*/
 
 		  glPushMatrix();/*座標系の保存*/
-	  	  glTranslatef(1.65*x+5,2*y-7,0);
+	  	  glTranslatef(1.9*x+5,2*y-7,0);
 			glRotatef( hanekakudo, 0.0, 0.0, 1.0);
 			glScalef(0.3,1.6,0.6);
  			glutSolidSphere(4, 40, 10);
 		 glPopMatrix();/*座標系の復元*/
 
 	  glPushMatrix();/*座標系の保存*/
-	    glTranslatef(1.5*x,1.5*y-8,0);
+	    glTranslatef(1.8*x,1.5*y-8,0);
 		glScalef(1.3,1.6,1);
  		glutSolidSphere(4, 40, 10);
 	 	glPopMatrix();/*座標系の復元*/
 
 	  glPushMatrix();/*座標系の保存*/
-	    glTranslatef(2*x,2*y,0);
+	    glTranslatef(2.5*x,2*y,0);
 		glScalef(1,1.1,1);
  		glutSolidSphere(4, 40, 10);
 	 	glPopMatrix();/*座標系の復元*/
@@ -175,27 +191,27 @@ if(boo == 0){
 		glEnable(GL_LIGHT0);
 
 		glPushMatrix();/*座標系の保存*/
-	  	  	glTranslatef(1.65*x-5,2*y-7,0);
+	  	  	glTranslatef(1.9*x-5,2*y-7,0);
 			glRotatef( -hanekakudo, 0.0, 0.0, 1.0);
 			glScalef(0.3,1.6,0.6);
  			glutSolidSphere(4, 40, 10);
 		 glPopMatrix();/*座標系の復元*/
 
 		  glPushMatrix();/*座標系の保存*/
-	  	  glTranslatef(1.65*x+5,2*y-7,0);
+	  	  glTranslatef(1.9*x+5,2*y-7,0);
 			glRotatef( hanekakudo, 0.0, 0.0, 1.0);
 			glScalef(0.3,1.6,0.6);
  			glutSolidSphere(4, 40, 10);
 		 glPopMatrix();/*座標系の復元*/
 
 	  glPushMatrix();/*座標系の保存*/
-	    glTranslatef(1.5*x,1.5*y-8,0);
+	    glTranslatef(1.8*x,1.5*y-8,0);
 		glScalef(1.3,1.6,1);
  		glutSolidSphere(4, 40, 10);
 	 	glPopMatrix();/*座標系の復元*/
 
 	  glPushMatrix();/*座標系の保存*/
-	    glTranslatef(2*x,2*y,0);
+	    glTranslatef(2.5*x,2*y,0);
 		glScalef(1,1.1,1);
  		glutSolidSphere(4, 40, 10);
 	 	glPopMatrix();/*座標系の復元*/
