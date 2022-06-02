@@ -55,7 +55,7 @@ void timer(int value) {
 	dif[1]= diffuse[count2][1];
 	dif[2]= diffuse[count2][2];
 	count++;
-	if(count == 23){ 
+	if(count == 26){ 
 		count = 0;
 	}
 
@@ -81,15 +81,15 @@ void display(void)
 		min_line = 1;
 		max_line = 2;
 		min_column = 0;
-		max_column = 0;
+		max_column = 1;
 	}else{
 		min_line = 0;
 		max_line = 8;
 		min_column = -8;
-		max_column = 8;
+		max_column = 9;
 	}
 	for(j=max_line; j>min_line; j--){
-		for(i=min_column; i<=max_column; i++){
+		for(i=min_column; i<max_column; i++){
 			glPushMatrix();
 
 			//交互に列をずらす処理
